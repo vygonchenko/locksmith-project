@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Новая заявка на звонок</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background-color: #f8f9fa; padding: 20px; border-radius: 5px; }
+        .content { margin-top: 20px; }
+        .info { background-color: #e9ecef; padding: 15px; border-radius: 5px; margin-bottom: 15px; }
+        .footer { margin-top: 30px; font-size: 12px; color: #6c757d; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Новая заявка на обратный звонок</h2>
+        </div>
+        <div class="content">
+            <div class="info">
+                <p><strong>Имя:</strong> {{ name }}</p>
+                <p><strong>Телефон:</strong> {{ phone }}</p>
+                <p><strong>Желаемое время:</strong> {{ preferred_time }}</p>
+                <p><strong>Сообщение:</strong> {{ message }}</p>
+            </div>
+            <p>Пожалуйста, свяжитесь с клиентом в указанное время.</p>
+        </div>
+        <div class="footer">
+            <p>Это автоматическое письмо с вашего сайта LOCKSNITH</p>
+        </div>
+    </div>
+</body>
+</html>
