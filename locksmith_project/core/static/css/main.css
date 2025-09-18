@@ -1,0 +1,240 @@
+/* Main CSS file for LOCKSNITH website */
+
+/* Base styles */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #382e11 !important;
+    box-shadow: 0 2px 10px rgba(50, 39, 16, 0.1);
+    padding: 0.75rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #fff !important;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #fff !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #000000 30%, #b39854 100%);
+    color: white;
+    padding: 100px 0 60px;
+    position: relative;
+    margin-top: 56px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.hero p.lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.emergency-notice {
+    background-color: var(--danger-color);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn-emergency {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(220, 53, 69, 0.2);
+}
+
+.btn-emergency:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(220, 53, 69, 0.3);
+}
+
+/* Services Section */
+.services-section {
+    background-color: var(--light-color);
+    padding: 60px 0;
+}
+
+.service-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+.guarantee-badge {
+    background-color: var(--success-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1rem;
+    box-shadow: 0 2px 4px rgba(25, 135, 84, 0.3);
+}
+
+/* Form Styling */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.floating-label {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    height: auto;
+    padding: 1rem 0.75rem 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.form-label {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.75rem;
+    transition: all 0.3s ease;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.form-control:focus~.form-label,
+.form-control:not(:placeholder-shown)~.form-label {
+    top: -0.5rem;
+    left: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    background-color: white;
+    padding: 0 0.25rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p.lead {
+        font-size: 1.1rem;
+    }
+    
+    .service-icon {
+        width: 60px;
+        height: 60px;
+    }
+}
