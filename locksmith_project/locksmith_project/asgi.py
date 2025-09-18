@@ -1,5 +1,5 @@
 """
-ASGI config for LOCKSNITH project.
+ASGI config for locksmith_project project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'LOCKSNITH.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'locksmith_project.settings')
 
 application = get_asgi_application()

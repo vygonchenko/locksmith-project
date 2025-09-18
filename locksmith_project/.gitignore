@@ -187,3 +187,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Test file
+test_django_setup.py

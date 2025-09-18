@@ -1,3 +1,4 @@
+# __init__.py
 """
-Settings configuration for LOCKSNITH project.
+Settings configuration for locksmith_project project.
 """
